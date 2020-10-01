@@ -1,0 +1,245 @@
+.cup-of-coffe {
+    background-image: url("../assets/cup_coffee.png");
+}
+
+.offer {
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/assets/coffeebeans.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 530px;
+}
+
+.offer h2 {
+    text-align: center;
+    font-size: 55px;
+    color: #6E381E;
+    font-weight: bold;
+}
+
+.offer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    height: 80%;
+    color: #000000;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.offer-container>div {
+    box-shadow: 0px 10px 30px rgba(106, 59, 36, 0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 10px 20px;
+    width: 80%;
+    background: white;
+    border-radius: 15px;
+}
+
+.coffee-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.3em;
+}
+
+.coffee-title p {
+    font-size: 13px;
+    margin: 0 10px;
+}
+
+.coffee-button {
+    background-color: #6E381E;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+
+.show-more {
+    background: #6E381E;
+    box-shadow: 0px 10px 30px rgba(106, 59, 36, 0.14);
+    border-radius: 41px;
+    text-align: center;
+    color: #FFFFFF;
+
+    text-shadow: 0px 18px 30px rgba(110, 56, 30, 0.16);
+    font-weight: 500;
+    font-size: 22px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.trivia {
+    background-image: url(../assets/trivia_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.trivia .two-column div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-bean {
+    position: relative;
+}
+
+.big-bean .bean-desc {
+    color: white;
+    position: absolute;
+    font-size: 12px;
+    width: 150px;
+    text-align: center;
+}
+
+.bean-desc::after {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100px;
+    background: white;
+}
+
+.bean-desc::before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white
+}
+
+.bean-desc.top-left {
+    top: -120px;
+    left: 60px;
+}
+
+.bean-desc.top-right {
+    top: -70px;
+    right: 60px;
+
+}
+
+.bean-desc.bottom-left {
+    bottom: -60px;
+    left: 30px;
+}
+
+.bean-desc.bottom-right {
+    bottom: -70px;
+    right: 80px;
+}
+
+.bean-desc.bottom-left::after,
+.bean-desc.bottom-right::after {
+    top: -110px;
+}
+
+.bean-desc.bottom-left::before,
+.bean-desc.bottom-right::before {
+    top: -15px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .cup-of-coffe {
+        display: none;
+    }
+
+    .two-column div:first-of-type {
+        width: 100%;
+    }
+
+    .two-column div:first-of-type div {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two-column div:first-of-type h1 {
+        font-size: 36px;
+    }
+
+    .two-column div:first-of-type p {
+        font-size: 15px;
+    }
+
+    .two-column div:first-of-type button {
+        align-self: center;
+    }
+
+
+    .offer {
+        height: 100%;
+        background-size: 160px;
+    }
+
+    .offer h2 {
+        font-size: 32px;
+    }
+
+    .offer-container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .offer-container>div {
+        margin: 10px 0;
+        grid-template-columns: 1fr;
+    }
+
+    .trivia .two-column {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .trivia .two-column div:first-of-type {
+        height: 50%;
+    }
+
+    .trivia .two-column div:nth-of-type(2) {
+        display: none;
+    }
+
+    .trivia .halfed {
+        margin-top: 15px;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .menu {
+        top: 20px;
+    }
+}
